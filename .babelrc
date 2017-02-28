@@ -1,0 +1,13 @@
+{
+  "sourceMaps": "inline",
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-es2015-modules-commonjs",
+    "transform-flow-strip-types",
+    "transform-async-to-generator",
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "transform-es2015-destructuring",
+    "transform-es2015-parameters",
+  ]
+}
