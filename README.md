@@ -1,5 +1,5 @@
 # LanguageServer-Java package
-[![macOS Build Status](https://travis-ci.org/atom/langaugeserver-java.svg?branch=master)](https://travis-ci.org/atom/langaugeserver-java) [![Windows Build Status](https://ci.appveyor.com/api/projects/langaugeserver-java/settings/branch/master?svg=true)](https://ci.appveyor.com/project/Atom/langaugeserver-java/branch/master) [![Dependency Status](https://david-dm.org/atom/langaugeserver-java.svg)](https://david-dm.org/atom/langaugeserver-java)
+[![macOS Build Status](https://travis-ci.org/atom/languageserver-java.svg?branch=master)](https://travis-ci.org/atom/languageserver-java) [![Windows Build Status](https://ci.appveyor.com/api/projects/languageserver-java/settings/branch/master?svg=true)](https://ci.appveyor.com/project/Atom/languageserver-java/branch/master) [![Dependency Status](https://david-dm.org/atom/languageserver-java.svg)](https://david-dm.org/atom/languageserver-javaa)
 
 Adds the Eclipse Java Language Server to Atom.
 
