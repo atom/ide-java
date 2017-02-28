@@ -1,8 +1,0 @@
-[ignore]
-
-[include]
-
-[libs]
-node_modules/atom-languageclient/flow-libs/
-
-[options]
