@@ -37,6 +37,16 @@
       "versions": {
         "0.0.0": "provideOutlines"
       }
+    },
+    "nuclide-definition-provider": {
+      "versions": {
+        "0.0.0": "provideDefinitions"
+      }
+    },
+    "hyperclick.provider": {
+      "versions": {
+        "0.0.0": "provideHyperclick"
+      }
     }
   }
 }
