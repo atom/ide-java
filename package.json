@@ -47,6 +47,11 @@
       "versions": {
         "0.0.0": "provideHyperclick"
       }
+    },
+    "nuclide-find-references.provider": {
+      "versions": {
+        "0.0.0": "provideFindReferences"
+      }
     }
   }
 }
