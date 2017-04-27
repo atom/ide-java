@@ -6,11 +6,8 @@
   "repository": "https://github.com/atom/languageserver-java",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.13.0"
+    "atom": ">=1.17.0"
   },
-  "activationHooks": [
-    "language-java:grammar-used"
-  ],
   "dependencies": {
     "atom-languageclient": "git://github.com/atom/atom-languageclient.git",
     "decompress": "^4.0.0"
