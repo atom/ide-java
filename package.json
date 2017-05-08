@@ -13,14 +13,19 @@
     "decompress": "^4.0.0"
   },
   "consumedServices": {
+    "linter-indie": {
+      "versions": {
+        "2.0.0": "consumeLinterV2"
+      }
+    },
     "status-bar": {
       "versions": {
         "^1.0.0": "consumeStatusBar"
       }
     },
-    "linter-indie": {
+    "nuclide-datatip.provider": {
       "versions": {
-        "2.0.0": "consumeLinterV2"
+        "0.0.0": "consumeDatatip"
       }
     }
   },
