@@ -1,8 +1,8 @@
 {
-  "name": "languageserver-java",
+  "name": "ide-java",
   "main": "./lib/main",
   "version": "0.1.0",
-  "description": "Provide Java language support via the Eclipse Java Language Server",
+  "description": "Java language support for Atom-IDE, powered by the Eclipse JDT language server",
   "repository": "https://github.com/atom/languageserver-java",
   "license": "MIT",
   "engines": {
