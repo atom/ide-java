@@ -3,7 +3,7 @@
   "main": "./lib/main",
   "version": "0.1.0",
   "description": "Java language support for Atom-IDE",
-  "repository": "https://github.com/atom/languageserver-java",
+  "repository": "https://github.com/atom/ide-java",
   "license": "MIT",
   "engines": {
     "atom": ">=1.17.0"
