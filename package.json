@@ -2,7 +2,7 @@
   "name": "ide-java",
   "main": "./lib/main",
   "version": "0.1.0",
-  "description": "Java language support for Atom-IDE, powered by the Eclipse JDT language server",
+  "description": "Java language support for Atom-IDE",
   "repository": "https://github.com/atom/languageserver-java",
   "license": "MIT",
   "engines": {
