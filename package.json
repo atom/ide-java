@@ -2,11 +2,17 @@
   "name": "ide-java",
   "main": "./lib/main",
   "version": "0.1.0",
-  "description": "Java language support for Atom-IDE",
+  "description": "Java language support for Atom-IDE.",
   "repository": "https://github.com/atom/ide-java",
   "license": "MIT",
   "engines": {
     "atom": ">=1.17.0"
+  },
+  "configSchema": {
+    "java.home": {
+      "type": "string",
+      "description": "Absolute path to JDK 8 home folder used to launch the Java Language Server."
+    }
   },
   "dependencies": {
     "atom-languageclient": "^0.1.0",
