@@ -6,7 +6,7 @@
   "repository": "https://github.com/atom/ide-java",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.17.0"
+    "atom": ">=1.18.0"
   },
   "configSchema": {
     "java.home": {
