@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "atom-languageclient": "^0.1.4",
-    "decompress": "^4.0.0"
+    "decompress": "^4.2.0"
   },
   "consumedServices": {
     "linter-indie": {
