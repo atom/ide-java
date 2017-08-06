@@ -18,6 +18,9 @@
     "atom-languageclient": "^0.1.4",
     "decompress": "^4.2.0"
   },
+  "enhancedScopes": [
+    "source.java"
+  ],
   "consumedServices": {
     "linter-indie": {
       "versions": {
