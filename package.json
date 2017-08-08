@@ -9,9 +9,10 @@
     "atom": ">=1.19.0"
   },
   "configSchema": {
-    "java.home": {
+    "javaHome": {
       "type": "string",
-      "description": "Absolute path to JDK 8 home folder used to launch the Java Language Server."
+      "default": "",
+      "description": "Absolute path to Java 8 home folder used to launch the Java language server."
     }
   },
   "dependencies": {
