@@ -50,6 +50,11 @@
         "0.1.0": "provideCodeFormat"
       }
     },
+    "code-highlight": {
+      "versions": {
+        "0.1.0": "provideCodeHighlight"
+      }
+    },
     "definitions": {
       "versions": {
         "0.1.0": "provideDefinitions"
