@@ -16,7 +16,7 @@
     }
   },
   "dependencies": {
-    "atom-languageclient": "^0.6.0",
+    "atom-languageclient": "^0.6.1",
     "decompress": "^4.2.0"
   },
   "enhancedScopes": [
