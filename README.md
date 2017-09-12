@@ -8,6 +8,17 @@ Java language support for Atom-IDE, powered by the [Eclipse JDT language server]
 ## Early access
 This package is currently an early access release.  You should also install the [atom-ide-ui](https://atom.io/packages/atom-ide-ui) package to expose the functionality within Atom.
 
+## Features
+
+* Auto completion
+* Code format
+* Diagnostics (errors & warnings)
+* Document outline
+* Find references
+* Go to definition
+* Hover
+* Reference highlighting
+
 ## Contributing
 Always feel free to help out!  Whether it's [filing bugs and feature requests](https://github.com/atom/languageserver-java/issues/new) or working on some of the [open issues](https://github.com/atom/languageserver-java/issues), Atom's [contributing guide](https://github.com/atom/atom/blob/master/CONTRIBUTING.md) will help get you started while the [guide for contributing to packages](https://github.com/atom/atom/blob/master/docs/contributing-to-packages.md) has some extra information.
 
