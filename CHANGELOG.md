@@ -1,3 +1,7 @@
+## v0.6.4
+
+- Ensure version detection compatible with openjdk
+
 ## v0.6.3
 
 - Change version detection logic to handle stderr and stdout
