@@ -1,3 +1,7 @@
+## v0.6.3
+
+- Change version detection logic to handle stderr and stdout
+
 ## v0.6.2
 
 - Update language server to 0.5.0 (fixes #8)
