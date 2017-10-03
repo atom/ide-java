@@ -15,7 +15,7 @@
     "javaHome": {
       "type": "string",
       "default": "",
-      "description": "Absolute path to Java 8 home folder used to launch the Java language server."
+      "description": "Absolute path to Java 8 or later home folder used to launch the Java language server."
     }
   },
   "atomTestRunner": "./test/runner",
