@@ -1,3 +1,8 @@
+## v0.6.5
+
+- Add Java 9 support
+- Status bar and process handle improvements
+
 ## v0.6.4
 
 - Ensure version detection compatible with openjdk
