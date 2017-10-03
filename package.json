@@ -5,6 +5,9 @@
   "description": "Java language support for Atom-IDE.",
   "repository": "https://github.com/atom/ide-java",
   "license": "MIT",
+  "scripts": {
+    "test": "atom --test test"
+  },
   "engines": {
     "atom": ">=1.21.0"
   },
@@ -15,9 +18,18 @@
       "description": "Absolute path to Java 8 home folder used to launch the Java language server."
     }
   },
+  "atomTestRunner": "./test/runner",
   "dependencies": {
     "atom-languageclient": "^0.6.4",
     "decompress": "^4.2.0"
+  },
+  "devDependencies": {
+    "atom-mocha-test-runner": "^1.0.1",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "mocha": "^3.4.2",
+    "mocha-appveyor-reporter": "^0.4.0",
+    "mocha-junit-and-console-reporter": "^1.6.0"
   },
   "enhancedScopes": [
     "source.java"
