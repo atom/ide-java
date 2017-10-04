@@ -3,8 +3,6 @@
 
 Java language support for Atom-IDE, powered by the [Eclipse JDT language server](https://github.com/eclipse/eclipse.jdt.ls).
 
-**Requires [Atom 1.21](https://atom.io/beta) - currently in beta**
-
 ![Screenshot of IDE-Java](https://user-images.githubusercontent.com/118951/30291233-0b6e04ac-96e7-11e7-9aa8-3cc6143537c1.png)
 
 ## Early access
