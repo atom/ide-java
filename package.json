@@ -13,9 +13,29 @@
   },
   "configSchema": {
     "javaHome": {
+      "order": 10,
       "type": "string",
       "default": "",
       "description": "Absolute path to Java 8 or later home folder used to launch the Java language server."
+    },
+    "errors": {
+      "order": 20,
+      "type": "object",
+      "title": "Warnings and Errors",
+      "properties": {
+        "incompleteClasspathSeverity": {
+          "type": "string",
+          "title": "Incomplete Classpath Severity",
+          "enum": [
+            "ignore",
+            "info",
+            "warning",
+            "error"
+          ],
+          "default": "warning",
+          "description": "Specifies the severity of the message when the classpath is incomplete for a Java file."
+        }
+      }
     }
   },
   "atomTestRunner": "./test/runner",
