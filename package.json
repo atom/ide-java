@@ -18,8 +18,19 @@
       "default": "",
       "description": "Absolute path to Java 8 or later home folder used to launch the Java language server."
     },
-    "errors": {
+    "virtualMachine": {
       "order": 20,
+      "type": "object",
+      "properties": {
+        "extraArgs": {
+          "type": "string",
+          "default": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication",
+          "description": "Extra arguments passed to the Java VM when launching the Java Language Server. Eg. use `-noverify -Xmx1G  -XX:+UseG1GC -XX:+UseStringDeduplication` to bypass class verification, increase the heap size to 1GB and enable String deduplication with the G1 Garbage collector."
+        }
+      }
+    },
+    "errors": {
+      "order": 30,
       "type": "object",
       "title": "Warnings and Errors",
       "properties": {
@@ -33,7 +44,7 @@
             "error"
           ],
           "default": "warning",
-          "description": "Specifies the severity of the message when the classpath is incomplete for a Java file."
+          "description": "Severity of the message when the classpath is incomplete for a Java file."
         }
       }
     }
