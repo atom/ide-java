@@ -1,3 +1,7 @@
+## v0.6.7
+
+- Update language server to v0.7.0 for better performance etc.
+
 ## v0.6.6
 
 - Fixed "Classpath is incomplete" error introduced in v0.6.4 caused by language server breaking LSP 2.0 support #37
