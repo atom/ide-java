@@ -22,10 +22,7 @@ describe('RemoveUnusedImportActionProvider', () => {
 
   describe('Code Action', () => {
     let editor
-
-    beforeEach(() => {
-      return atom.workspace.open().then(e => editor = e)
-    })
+    beforeEach(() => return atom.workspace.open().then(e => editor = e))
 
     it('should delete the import', () => {
       const srcText = `
