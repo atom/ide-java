@@ -164,15 +164,15 @@ describe.only('AutoImportActionProvider', () => {
     it('should place imports above other imports', () => {
       const pkg = 'java.util.Optional'
       const editorText = `
-  package com.example;
+package com.example;
 
-  import java.util.Map;
+import java.util.Map;
 `
       const expectedText = `
-  package com.example;
+package com.example;
 
-  import ${pkg};
-  import java.util.Map;
+import ${pkg};
+import java.util.Map;
 `
 
       editor.setText(editorText)
@@ -184,16 +184,11 @@ describe.only('AutoImportActionProvider', () => {
     it('should place imports below package if no imports exist', () => {
       const pkg = 'java.util.Optional'
       const editorText = `
-  package com.example;
+package com.example;
 `
 
-      // the editor for some reason autoindents the new line
-      // so we need to add two spaces to account for that
-      const expectedText = `
-  package com.example;
-\ \
-  import ${pkg};
-`
+      const expectedText = '\npackage com.example;'
+        + `\n\nimport ${pkg};\n`
 
       editor.setText(editorText)
       addImport(editor, pkg)
@@ -214,9 +209,9 @@ describe.only('AutoImportActionProvider', () => {
     it('should retain users cursor position', () => {
       const pkg = 'java.util.Optional'
       const editorText = `
-  package com.example;
+package com.example;
 
-  public class MyClass {}
+public class MyClass {}
 `
 
       editor.setText(editorText)
@@ -253,33 +248,33 @@ describe.only('AutoImportActionProvider', () => {
       )
 
       const editorText = `
-  package com.example;
+package com.example;
 
-  import java.util.Map;
+import java.util.Map;
 
-  public class MyClass {
-    private Map<String, String> m;
-    public MyClass() { m = new HashMap<>() }
-  }
+public class MyClass {
+  private Map<String, String> m;
+  public MyClass() { m = new HashMap<>() }
+}
 `
 
       const expectedText = `
-  package com.example;
+package com.example;
 
-  import java.util.HashMap;
-  import java.util.Map;
+import java.util.HashMap;
+import java.util.Map;
 
-  public class MyClass {
-    private Map<String, String> m;
-    public MyClass() { m = new HashMap<>() }
-  }
+public class MyClass {
+  private Map<String, String> m;
+  public MyClass() { m = new HashMap<>() }
+}
 `
       editor.setText(editorText)
 
-      const range = { start: [8, 31], end: [8, 37] }
+      const range = { start: [7, 29], end: [7, 35] }
       const diagnostic = { text: 'HashMap cannot be resolved to a type' }
 
-      editor.setCursorBufferPosition(range)
+      editor.setCursorBufferPosition({ row: 7, column: 29 })
       const wordUnderCursor = editor.getWordUnderCursor()
 
       provider(editor, range, diagnostic, client).apply()
@@ -298,14 +293,14 @@ describe.only('AutoImportActionProvider', () => {
       })
 
       const editorText = `
-  package com.example;
+package com.example;
 
-  import java.util.Map;
+import java.util.Map;
 
-  public class MyClass {
-    private Map<String, String> m;
-    public MyClass() { m = new HashMap<>() }
-  }
+public class MyClass {
+  private Map<String, String> m;
+  public MyClass() { m = new HashMap<>() }
+}
 `
 
       editor.setText(editorText)

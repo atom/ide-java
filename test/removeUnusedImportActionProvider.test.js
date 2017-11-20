@@ -26,22 +26,22 @@ describe('RemoveUnusedImportActionProvider', () => {
 
     it('should delete the import', () => {
       const srcText = `
-  package com.example;
+package com.example;
 
-  import com.example.SomeUsedImport;
-  import com.example.SomeUnusedImport;
-  import com.example.SomeOtherUsedImport;
+import com.example.SomeUsedImport;
+import com.example.SomeUnusedImport;
+import com.example.SomeOtherUsedImport;
 
-  public class MyClass {}
+public class MyClass {}
 `
 
       const expectedText = `
-  package com.example;
+package com.example;
 
-  import com.example.SomeUsedImport;
-  import com.example.SomeOtherUsedImport;
+import com.example.SomeUsedImport;
+import com.example.SomeOtherUsedImport;
 
-  public class MyClass {}
+public class MyClass {}
 `
 
       editor.setText(srcText)
@@ -57,9 +57,9 @@ describe('RemoveUnusedImportActionProvider', () => {
 
     it('should return the cursor to its previous position', () => {
       const srcText = `
-  package com.example;
+package com.example;
 
-  import com.example.SomeUnusedImport;
+import com.example.SomeUnusedImport;
 `
 
       editor.setText(srcText)
