@@ -1,15 +1,3 @@
-// TODO: we need to create an atom editor and fill it with text in order
-// to test text editing
-// from https://discuss.atom.io/t/cannot-get-active-text-editor-in-tests/24285/7
-// [workspaceElement, activationPromise, editor] = []
-//
-// beforeEach ->
-//   workspaceElement = atom.views.getView(atom.workspace)
-//   activationPromise = atom.packages.activatePackage('word-count-tutorial')
-//   waitsForPromise ->
-//     atom.workspace.open().then (e) ->
-//       editor = e
-
 const {pointsAreEqual} = require('./helpers/points.helper')
 const {Point} = require('atom')
 const {provider, isUnusedImport} = require('../lib/providers/removeUnusedImportActionProvider')
