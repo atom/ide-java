@@ -20,6 +20,11 @@ describe.only('autoImportActionProvider', () => {
       const text = 'SOME_VAR cannot be resolved to a variable'
       expect(isCandidateForAutoImport({text})).to.be.true
     })
+
+    it('should return false for imports that cannot be resolved', () => {
+      const text = 'The import javax cannot be resolved'
+      expect(isCandidateForAutoImport({text})).to.be.false
+    })
   })
 
   describe('getUnimportedType', () => {
