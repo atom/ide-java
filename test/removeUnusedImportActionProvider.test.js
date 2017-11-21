@@ -2,7 +2,7 @@ const {pointsAreEqual} = require('./helpers/points.helper')
 const {Point} = require('atom')
 const {provider, isUnusedImport} = require('../lib/providers/removeUnusedImportActionProvider')
 
-describe('RemoveUnusedImportActionProvider', () => {
+describe('removeUnusedImportActionProvider', () => {
   describe('isUnusedImport', () => {
     it('should return true for unused class import messages', () => {
       const msg = { text: 'The import Map is never used' }

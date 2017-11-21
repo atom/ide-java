@@ -1,4 +1,4 @@
-const ActionProviderComposer = require('../lib/providers/actionProviderComposer')
+const actionProviderComposer = require('../lib/providers/actionProviderComposer')
 
 const makeCodeAction = (title, result) => ({
   getTitle() { return title },
@@ -11,7 +11,7 @@ const buildLanguageClientNotifierMock = errCb => ({
   createNotification: (severity, err) => done(errCb)
 })
 
-describe('ActionProviderComposer', done => {
+describe('actionProviderComposer', done => {
   it('provides diagnostics to providers', done => {
     const provider = idx => (_, __, diagnostic, cl) => {
       expect(diagnostic).to.be.equal(diagnosticMock)
@@ -19,7 +19,7 @@ describe('ActionProviderComposer', done => {
       return [ makeCodeAction(`test${idx}`, Promise.resolve()) ]
     }
 
-    ActionProviderComposer(buildLanguageClientNotifierMock(done), provider(1), provider(2))
+    actionProviderComposer(buildLanguageClientNotifierMock(done), provider(1), provider(2))
     .getCodeActions(null, null, [diagnosticMock])
     .then(actions => {
       expect(actions).not.to.be.null
@@ -34,7 +34,7 @@ describe('ActionProviderComposer', done => {
       return makeCodeAction('test', Promise.resolve())
     }
 
-    ActionProviderComposer(buildLanguageClientNotifierMock(done), provider)
+    actionProviderComposer(buildLanguageClientNotifierMock(done), provider)
     .getCodeActions(null, null, [diagnosticMock])
     .then(actions => {
       expect(actions).not.to.be.null
@@ -49,7 +49,7 @@ describe('ActionProviderComposer', done => {
       return [ makeCodeAction('promise test', Promise.resolve(true)) ]
     }
 
-    ActionProviderComposer(buildLanguageClientNotifierMock(done), provider)
+    actionProviderComposer(buildLanguageClientNotifierMock(done), provider)
     .getCodeActions(null, null, [diagnosticMock])
     .then(() => done())
     .catch(err => done(err))
@@ -58,7 +58,7 @@ describe('ActionProviderComposer', done => {
   it('cleans all null results', done => {
     const provider = (_, __, diagnostic, cl) => { return null }
 
-    ActionProviderComposer(buildLanguageClientNotifierMock(done), provider)
+    actionProviderComposer(buildLanguageClientNotifierMock(done), provider)
     .getCodeActions(null, null, [diagnosticMock])
     .then(() => done())
     .catch(err => done(err))
@@ -72,7 +72,7 @@ describe('ActionProviderComposer', done => {
 
     const provider = () => { throw new Error('Provider creation error') }
 
-    ActionProviderComposer(languageClientMock, provider)
+    actionProviderComposer(languageClientMock, provider)
     .getCodeActions(null, null, [diagnosticMock])
     .catch(err => done(err))
   })
@@ -85,13 +85,13 @@ describe('ActionProviderComposer', done => {
 
     const provider = () => Promise.reject('Action creation error')
 
-    ActionProviderComposer(languageClientMock, provider)
+    actionProviderComposer(languageClientMock, provider)
     .getCodeActions(null, null, [diagnosticMock])
     .catch(err => done(err))
   })
 
   it('calls through with no providers', () => {
-    ActionProviderComposer(buildLanguageClientNotifierMock(done))
+    actionProviderComposer(buildLanguageClientNotifierMock(done))
     .getCodeActions(null, null, [diagnosticMock])
     .then(actions => {
       expect(actions).not.to.be.null
