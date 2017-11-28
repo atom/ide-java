@@ -71,6 +71,11 @@
         "2.0.0": "consumeLinterV2"
       }
     },
+    "atom-ide-busy-signal": {
+      "versions": {
+        "0.1.0": "consumeBusySignal"
+      }
+    },
     "datatip": {
       "versions": {
         "0.1.0": "consumeDatatip"
