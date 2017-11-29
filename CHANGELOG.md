@@ -1,4 +1,13 @@
+## v0.7.0
+
+- Update language server to 0.8.0
+- Update atom-languageclient to 0.7.0 which includes
+  - Sorting autocomplete results, fixes #46
+  - Snippet completion type items
+  - Busy signals for startup and shutdown
+
 ## v0.6.8
+
 - Only add status bar tile after ide-java detects Java files
 
 ## v0.6.7
