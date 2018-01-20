@@ -1,3 +1,12 @@
+## v0.8.0
+
+- Update language server to 0.11.0
+- Update atom-languageclient to 0.8.1 which includes
+  - Filtering autocomplete results
+  - Using resolve to complete items
+  - Server restart/recovery
+  - Cancels outstanding autocomplete/outline requests when no longer needed
+
 ## v0.7.0
 
 - Update language server to 0.8.0
