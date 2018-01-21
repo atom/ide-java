@@ -75,7 +75,10 @@ import com.example.SomeUnusedImport;
 
       return action.apply()
       .then(() => expect(
-          pointsAreEqual(cursorPos, editor.getCursorBufferPosition())
+          pointsAreEqual(
+            Object.assign({}, cursorPos, { row: cursorPos.row - 1 }),
+            editor.getCursorBufferPosition()
+          )
         ).to.be.true
       )
     })
