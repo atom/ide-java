@@ -1,7 +1,7 @@
 {
   "name": "ide-java",
   "main": "./lib/main",
-  "version": "0.6.8",
+  "version": "0.7.0",
   "description": "Java language support for Atom-IDE.",
   "repository": "https://github.com/atom/ide-java",
   "license": "MIT",
@@ -51,7 +51,7 @@
   },
   "atomTestRunner": "./test/runner",
   "dependencies": {
-    "atom-languageclient": "^0.6.5",
+    "atom-languageclient": "0.8.1",
     "atom-space-pen-views": "^2.2.0",
     "decompress": "^4.2.0"
   },
@@ -70,6 +70,11 @@
     "linter-indie": {
       "versions": {
         "2.0.0": "consumeLinterV2"
+      }
+    },
+    "atom-ide-busy-signal": {
+      "versions": {
+        "0.1.0": "consumeBusySignal"
       }
     },
     "datatip": {
