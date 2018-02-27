@@ -1,9 +1,9 @@
 ## v0.8.0
 
-- Update language server to 0.11.0
-- Update atom-languageclient to 0.8.1 which includes
-  - Filtering autocomplete results
-  - Using resolve to complete items
+- Update language server to 0.12.1 for better editing and Java 9 support
+- Now link classpath message to our own wiki help instead of Eclipse's
+- Update atom-languageclient to 0.9.0 which includes
+  - Superior autocomplete (min-char triggers, caching, filtering, resolve)
   - Server restart/recovery
   - Cancels outstanding autocomplete/outline requests when no longer needed
 
