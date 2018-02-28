@@ -1,3 +1,7 @@
+## v0.8.1
+
+- Update atom-languageclient to 0.9.1 to address missing trigger characters on some completions
+
 ## v0.8.0
 
 - Update language server to 0.12.1 for better editing and Java 9 support
