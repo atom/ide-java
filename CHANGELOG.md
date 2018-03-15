@@ -1,3 +1,8 @@
+## v0.8.2
+
+- Improve java version detection - thanks @Arcanemagus
+- Update atom-languageclient to 0.9.3 to address messages with buttons & console logging
+
 ## v0.8.1
 
 - Update atom-languageclient to 0.9.1 to address missing trigger characters on some completions
