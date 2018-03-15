@@ -2,6 +2,7 @@
 
 - Improve java version detection - thanks @Arcanemagus
 - Update atom-languageclient to 0.9.3 to address messages with buttons & console logging
+- Update language server to 0.15.0 for improved hover, config triggers, diagnostic ranges etc.
 
 ## v0.8.1
 
