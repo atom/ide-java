@@ -52,7 +52,6 @@ describe.only('autoImportActionProvider', () => {
 
       it('should throw error if type or package name is missing', () => {
         try {
-          const suggestion = { type: 'class', displayText: 'Invalid message' }
           expect.fail('Should have thrown error')
         } catch (error) {
           expect(error).not.to.be.null
@@ -72,7 +71,6 @@ describe.only('autoImportActionProvider', () => {
 
       it('should throw error if `leftLabel` property is missing', () => {
         try {
-          const suggestion = { type: 'function' }
           expect.fail('Should have thrown error')
         } catch (error) {
           expect(error).not.to.be.null
