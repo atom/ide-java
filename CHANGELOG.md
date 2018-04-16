@@ -1,3 +1,9 @@
+## v0.8.3
+
+- Experimental support for Java extensions #66 thanks @bokyoalex
+- Refocus select list after code actions #70 thanks @tylerfowler
+- Enable console logging service #73 thanks @tylerfowler
+
 ## v0.8.2
 
 - Improve java version detection - thanks @Arcanemagus
