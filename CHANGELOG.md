@@ -1,6 +1,6 @@
 ## v0.8.3
 
-- Experimental support for Java extensions #66 thanks @bokyoalex
+- Experimental support for Java extensions #66 thanks @boykoalex
 - Refocus select list after code actions #70 thanks @tylerfowler
 - Enable console logging service #73 thanks @tylerfowler
 - Update atom-languageclient to 0.9.5
