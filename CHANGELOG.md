@@ -1,3 +1,8 @@
+## v0.9.0
+
+- Update language server to 0.39.0 for signature help and many other improvements (#105), thanks @appelgriebsch
+- Code cleanup and make sure that ide-java continues working on newer Node versions (#97), thanks @Aerijo
+
 ## v0.8.3
 
 - Experimental support for Java extensions #66 thanks @boykoalex
