@@ -29,22 +29,46 @@
         }
       }
     },
-    "errors": {
+    "server": {
       "order": 30,
       "type": "object",
-      "title": "Warnings and Errors",
+      "title": "Language Server",
+      "description": "Settings that control language server functionality.",
       "properties": {
-        "incompleteClasspathSeverity": {
-          "type": "string",
-          "title": "Incomplete Classpath Severity",
-          "enum": [
-            "ignore",
-            "info",
-            "warning",
-            "error"
-          ],
-          "default": "warning",
-          "description": "Severity of the message when the classpath is incomplete for a Java file."
+        "signatureHelp": {
+          "type": "object",
+          "title": "Signature Help",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true,
+              "description": "Controls whether signature help is enabled."
+            }
+          }
+        },
+        "errors": {
+          "type": "object",
+          "title": "Warnings and Errors",
+          "properties": {
+            "incompleteClasspath": {
+              "type": "object",
+              "title": "Incomplete Classpath",
+              "properties": {
+                "severity": {
+                  "type": "string",
+                  "title": "Incomplete Classpath Severity",
+                  "enum": [
+                    "ignore",
+                    "info",
+                    "warning",
+                    "error"
+                  ],
+                  "default": "warning",
+                  "description": "Severity of the message when the classpath is incomplete for a Java file."
+                }
+              }
+            }
+          }
         }
       }
     }
