@@ -35,12 +35,30 @@
       "title": "Language Server",
       "description": "Settings that control language server functionality.",
       "properties": {
+        "configuration": {
+          "type": "object",
+          "title": "Project Configuration",
+          "properties": {
+            "updateBuildConfiguration": {
+              "type": "string",
+              "title": "Update Build Configuration",
+              "enum": [
+                {"value": "disabled", "description": "Never"},
+                {"value": "interactive", "description": "Ask every time"},
+                {"value": "automatic", "description": "Always"}
+              ],
+              "default": "interactive",
+              "description": "Whether to automatically update the project configuration when build files change."
+            }
+          }
+        },
         "signatureHelp": {
           "type": "object",
           "title": "Signature Help",
           "properties": {
             "enabled": {
               "type": "boolean",
+              "title": "Enabled",
               "default": true,
               "description": "Controls whether signature help is enabled."
             }
