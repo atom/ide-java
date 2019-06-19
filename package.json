@@ -205,7 +205,17 @@
     },
     "code-format.range": {
       "versions": {
-        "0.1.0": "provideCodeFormat"
+        "0.1.0": "provideRangeCodeFormat"
+      }
+    },
+    "code-format.file": {
+      "versions": {
+        "0.1.0": "provideFileCodeFormat"
+      }
+    },
+    "code-format.onType": {
+      "versions": {
+        "0.1.0": "provideOnTypeCodeFormat"
       }
     },
     "code-highlight": {
