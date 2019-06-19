@@ -218,6 +218,11 @@
         "0.1.0": "provideOnTypeCodeFormat"
       }
     },
+    "code-format.onSave": {
+      "versions": {
+        "0.1.0": "provideOnSaveCodeFormat"
+      }
+    },
     "code-highlight": {
       "versions": {
         "0.1.0": "provideCodeHighlight"
