@@ -150,7 +150,7 @@
   },
   "atomTestRunner": "./test/runner",
   "dependencies": {
-    "atom-languageclient": "0.9.5",
+    "atom-languageclient": "^0.9.9",
     "atom-select-list": "^0.7.1",
     "decompress": "^4.2.0"
   },
