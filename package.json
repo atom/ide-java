@@ -52,6 +52,63 @@
             }
           }
         },
+        "format": {
+          "type": "object",
+          "title": "Format",
+          "properties": {
+            "enabled": {
+              "order": 1,
+              "type": "boolean",
+              "title": "Enabled",
+              "default": true,
+              "description": "Controls whether formatting is enabled."
+            },
+            "comments": {
+              "type": "object",
+              "title": "Comments",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "title": "Enabled",
+                  "default": true,
+                  "description": "Include comments when formatting."
+                }
+              }
+            },
+            "onType": {
+              "type": "object",
+              "title": "On Type",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "title": "Enabled",
+                  "default": true,
+                  "description": "Format code as you type."
+                }
+              }
+            },
+            "settings": {
+              "type": "object",
+              "title": "Settings",
+              "properties": {
+                "url": {
+                  "order": 1,
+                  "type": "string",
+                  "title": "URL",
+                  "default": "",
+                  "description": "URL to an XML file specifying format options."
+                },
+                "profile": {
+                  "order": 2,
+                  "type": "string",
+                  "title": "Profile Name",
+                  "default": "",
+                  "description": "Name of the formatter profile to use. Has no effect unless a formatter URL is specified."
+                }
+              }
+            }
+          }
+        },
         "signatureHelp": {
           "type": "object",
           "title": "Signature Help",
