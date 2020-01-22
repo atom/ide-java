@@ -43,9 +43,18 @@
               "type": "string",
               "title": "Update Build Configuration",
               "enum": [
-                {"value": "disabled", "description": "Never"},
-                {"value": "interactive", "description": "Ask every time"},
-                {"value": "automatic", "description": "Always"}
+                {
+                  "value": "disabled",
+                  "description": "Never"
+                },
+                {
+                  "value": "interactive",
+                  "description": "Ask every time"
+                },
+                {
+                  "value": "automatic",
+                  "description": "Always"
+                }
               ],
               "default": "interactive",
               "description": "Whether to automatically update the project configuration when build files change."
@@ -93,7 +102,7 @@
   },
   "atomTestRunner": "./test/runner",
   "dependencies": {
-    "atom-languageclient": "0.9.5",
+    "atom-languageclient": "0.9.9",
     "atom-select-list": "^0.7.1",
     "decompress": "^4.2.0"
   },
