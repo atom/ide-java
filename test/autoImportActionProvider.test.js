@@ -78,6 +78,25 @@ describe.only('autoImportActionProvider', () => {
       })
     })
 
+    describe('Suggestion Type: `mixin`', () => {
+      it('should build the correct import package path', () => {
+        const suggestion = {
+          type: 'mixin',
+          displayText: 'PostMessage - org.springframework.web.bind.annotation'
+        }
+
+        expect(buildImportSuggestion(suggestion)).to.equal('org.springframework.web.bind.annotation.PostMessage')
+      })
+
+      it('should throw error if type or package name is missing', () => {
+        try {
+          expect.fail('Should have thrown error')
+        } catch (error) {
+          expect(error).not.to.be.null
+        }
+      })
+    })
+
     it('should throw error for unknown suggestion type', () => {
       try {
         buildImportSuggestion({ type: 'unknown type' })
