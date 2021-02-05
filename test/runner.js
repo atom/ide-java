@@ -5,17 +5,9 @@ const {createRunner} = require('atom-mocha-test-runner')
 global.assert = chai.assert
 global.expect = chai.expect
 
-global.stress = function(count, ...args) {
-  const [description, ...rest] = args
-  for (let i = 0; i < count; i++) {
-    it.only(`${description} #${i}`, ...rest)
-  }
-}
-
 module.exports = createRunner({
   htmlTitle: `IDE-Java Package Tests - pid ${process.pid}`,
   reporter: process.env.MOCHA_REPORTER || 'spec',
-  overrideTestPaths: [/spec$/, /test/],
 }, mocha => {
   mocha.timeout(parseInt(process.env.MOCHA_TIMEOUT || '5000', 10))
 
