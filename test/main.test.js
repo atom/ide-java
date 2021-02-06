@@ -21,6 +21,13 @@ describe('main', () => {
       expect(version).to.be.equal(1.8)
     })
 
+    it('returns 11.0 for OpenJDK 11.0 (debian, versions with 3rd dot in version number)', () => {
+      const version = JavaLanguageClient.getJavaVersionFromOutput('openjdk version "11.0.9.1" 2020-11-04'
+        + '\nOpenJDK Runtime Environment (build 11.0.9.1+1-post-Debian-1deb10u2)'
+        + '\nOpenJDK 64-Bit Server VM (build 11.0.9.1+1-post-Debian-1deb10u2, mixed mode, sharing)')
+      expect(version).to.be.equal(11.0)
+    })
+
     it('returns 1.8 for OpenJDK 1.8 (custom)', () => {
       // #54
       const version = JavaLanguageClient.getJavaVersionFromOutput('openjdk version "1.8.0_172-solus"'
