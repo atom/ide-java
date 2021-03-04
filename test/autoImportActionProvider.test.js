@@ -78,6 +78,25 @@ describe.only('autoImportActionProvider', () => {
       })
     })
 
+    describe('Suggestion Type: `enum`', () => {
+      it('should build the correct import package path', () => {
+        const suggestion = {
+          type: 'enum',
+          displayText: 'Month - java.time'
+        }
+
+        expect(buildImportSuggestion(suggestion)).to.equal('java.time.Month')
+      })
+
+      it('should throw error if type or package name is missing', () => {
+        try {
+          expect.fail('Should have thrown error')
+        } catch (error) {
+          expect(error).not.to.be.null
+        }
+      })
+    })
+
     it('should throw error for unknown suggestion type', () => {
       try {
         buildImportSuggestion({ type: 'unknown type' })
