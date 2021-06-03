@@ -1,5 +1,5 @@
 # IDE-Java package
-[![macOS Build Status](https://travis-ci.org/atom/ide-java.svg?branch=master)](https://travis-ci.org/atom/id4e-java) [![Windows Build Status](https://ci.appveyor.com/api/projects/status/1jvknxt9jhykgrxo?svg=true)](https://ci.appveyor.com/project/Atom/ide-java/branch/master) [![Dependency Status](https://david-dm.org/atom/ide-java.svg)](https://david-dm.org/atom/ide-java)
+[![CI](https://github.com/atom/ide-java/actions/workflows/ci.yml/badge.svg)](https://github.com/atom/ide-java/actions/workflows/ci.yml)
 
 Java language support for Atom-IDE, powered by the [Eclipse JDT language server](https://github.com/eclipse/eclipse.jdt.ls).
 

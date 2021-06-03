@@ -20,4 +20,4 @@ jobs:
     - name: Install dependencies
       run: apm install
     - name: Run tests
-      run: atom --test spec
+      run: atom --test test
