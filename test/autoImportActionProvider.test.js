@@ -4,7 +4,7 @@ const {
   buildImportSuggestion, isCandidateForAutoImport
 } = require('../lib/providers/autoImportActionProvider')
 
-describe.only('autoImportActionProvider', () => {
+describe('autoImportActionProvider', () => {
   describe('isCandidateForAutoImport', () => {
     it('should return true for class resolution errors', () => {
       const text = 'SomeClass cannot be resolved'
